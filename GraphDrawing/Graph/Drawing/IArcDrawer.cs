@@ -5,8 +5,8 @@ using Cairo;
 
 namespace GraphDrawing.Graph.Drawing
 {
-	public interface IArcDrawer
-	{
-		void Draw (Arc arc, Context context); 
-	}
+    public interface IArcDrawer
+    {
+        void Draw(Arc arc, Context context);
+    }
 }

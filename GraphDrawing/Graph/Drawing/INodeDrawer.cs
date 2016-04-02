@@ -5,9 +5,9 @@ using Cairo;
 
 namespace GraphDrawing.Graph.Drawing
 {
-	public interface INodeDrawer
-	{
-		void Draw (Node node, Context context); 
-	}
+    public interface INodeDrawer
+    {
+        void Draw(Node node, Context context);
+    }
 }
 

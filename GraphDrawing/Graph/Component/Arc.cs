@@ -2,11 +2,11 @@
 
 namespace GraphDrawing.Graph.Component
 {
-	public class Arc
-	{
-		public Arc ()
-		{
-		}
-	}
+    public class Arc
+    {
+        public Arc()
+        {
+        }
+    }
 }
 

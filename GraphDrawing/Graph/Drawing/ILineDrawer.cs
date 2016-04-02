@@ -5,8 +5,8 @@ using Cairo;
 
 namespace GraphDrawing.Graph.Drawing
 {
-	public interface ILineDrawer
-	{
-		void Draw (Line line, Context context); 
-	}
+    public interface ILineDrawer
+    {
+        void Draw(Line line, Context context);
+    }
 }
