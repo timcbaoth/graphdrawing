@@ -2,16 +2,17 @@
 using System.ComponentModel;
 using Cairo;
 using Gdk;
+using GraphDrawing.Graph.Drawing;
 using Gtk;
 using Rectangle = Cairo.Rectangle;
 
 namespace GraphDrawing
 {
-    [ToolboxItem(true)]
     public class GraphDrawingArea : DrawingArea
     {
         public void Wahoo()
         {
+
             using (var cr = CairoHelper.Create(GdkWindow))
             {
 

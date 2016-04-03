@@ -1,16 +1,20 @@
-﻿using System;
-using GraphDrawing.Graph.Component;
-using System.Collections.Generic;
+﻿using GraphDrawing.Graph.Component;
+using GraphDrawing.Collections;
 
 namespace GraphDrawing.Graph
 {
     public class Graph
     {
-        public ISet<Node> Nodes { get; }
-        public ISet<Arc> Arcs { get; }
-        public ISet<Line> Lines { get; }
+        public IReadOnlySet<Node> Nodes { get; }
+        public IReadOnlySet<Arc> Arcs { get; }
+        public IReadOnlySet<Line> Lines { get; }
 
-        public Graph(ISet<Node> nodes, ISet<Arc> arcs, ISet<Line> lines)
+        public int NumberOfNodes => Nodes.Count;
+        public int NumberOfLines => Lines.Count;
+        public int NumberOfArcs => Arcs.Count;
+        public int NumberOfConnections => NumberOfArcs + NumberOfLines;
+
+        public Graph(IReadOnlySet<Node> nodes, IReadOnlySet<Arc> arcs, IReadOnlySet<Line> lines)
         {
             Nodes = nodes;
             Arcs = arcs;

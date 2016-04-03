@@ -53,6 +53,13 @@
     <Reference Include="Mono.Cairo, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Collections\IReadOnlySet.cs" />
+    <Compile Include="Collections\LinqExtensions.cs" />
+    <Compile Include="Collections\ReadOnlySet.cs" />
+    <Compile Include="Graph\Drawing\ArcDrawer.cs" />
+    <Compile Include="Graph\Drawing\LineDrawer.cs" />
+    <Compile Include="Graph\Drawing\NodeDrawer.cs" />
+    <Compile Include="StartWindow.cs" />
     <Compile Include="MainWindow.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
