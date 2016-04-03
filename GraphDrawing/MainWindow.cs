@@ -1,5 +1,5 @@
-﻿using System;
-using Gtk;
+﻿using Gtk;
+using Mono.Unix;
 
 namespace GraphDrawing
 {
@@ -10,16 +10,13 @@ namespace GraphDrawing
         public MainWindow(GraphDrawingArea graphDrawingArea) : base(WindowType.Toplevel)
         {
             Name = "GraphDrawing.MainWindow";
-            Title = Mono.Unix.Catalog.GetString("Graph drawing");
+            Title = Catalog.GetString("Graph drawing");
             WindowPosition = ((WindowPosition)(4));
-            if ((Child != null))
-            {
-                Child.ShowAll();
-            }
+            Child?.ShowAll();
             DefaultWidth = 400;
             DefaultHeight = 300;
             Show();
-            DeleteEvent += new DeleteEventHandler(this.OnDeleteEvent);
+            DeleteEvent += OnDeleteEvent;
             this.graphDrawingArea = graphDrawingArea;
             Add(graphDrawingArea);
             graphDrawingArea.ExposeEvent += OnExpose;
@@ -33,7 +30,7 @@ namespace GraphDrawing
             a.RetVal = true;
         }
 
-        void OnExpose(object sender, ExposeEventArgs args)
+        private void OnExpose(object sender, ExposeEventArgs args)
         {
             graphDrawingArea.Wahoo();
         }

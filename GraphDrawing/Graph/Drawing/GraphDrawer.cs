@@ -25,12 +25,18 @@ namespace GraphDrawing.Graph.Drawing
                 {
                     nodeDrawer.Draw(node, context);
                 }
+            }
 
+            using (var context = CairoHelper.Create(gdkWindow))
+            {
                 foreach (var arc in graph.Arcs)
                 {
                     arcDrawer.Draw(arc, context);
                 }
+            }
 
+            using (var context = CairoHelper.Create(gdkWindow))
+            {
                 foreach (var line in graph.Lines)
                 {
                     lineDrawer.Draw(line, context);
